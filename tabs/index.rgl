@@ -1,0 +1,16 @@
+<div class="m-tabs {class}" z-dis={disabled} r-hide={!visible}>
+    <ul class="tabs_hd">
+        {#list _list as item}
+        <li z-crt={item === _selected} z-dis={item.data.disabled} title={item.data.title} r-hide={!item.data.visible} on-click={item.select()}>
+            {#if @(titleTemplate)}
+                {#inc @(titleTemplate)}
+            {#else}
+                {item.data.title}
+            {/if}
+        </li>
+        {/list}
+    </ul>
+    <div class="tabs_bd">
+        {#inc this.$body}
+    </div>
+</div>

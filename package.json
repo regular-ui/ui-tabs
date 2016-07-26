@@ -1,0 +1,16 @@
+{
+  "name": "rgui-ui-tabs",
+  "description": "Regular UI - Tabs",
+  "version": "0.2.0",
+  "author": "Rainfore <rainforest92@126.com>",
+  "main": "./index.js",
+  "repository": "regular-ui/ui-tabs",
+  "homepage": "http://regular-ui.github.io",
+  "bugs": {"url": "http://github.com/regular-ui/ui-tabs/issues"},
+  "license": "MIT",
+  "keywords": ["regular", "ui", "rgui", "tabs"],
+  "tags": ["regular", "ui", "rgui", "tabs"],
+  "dependencies": {
+    "rgui-ui-listview": "regular-ui/ui-listview#master"
+  }
+}
