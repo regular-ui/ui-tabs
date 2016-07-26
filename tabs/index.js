@@ -55,15 +55,6 @@ const Tabs = ListView.extend({
             this.data.current = newValue ? this.data._list.indexOf(newValue) : newValue;
         });
     },
-    /**
-     * @protected
-     * @override
-     */
-    init() {
-        this.supr();
-        //if (!this.data._selected)
-        //    this.data._selected = this.data._list[0];
-    },
 });
 
 export default Tabs;
