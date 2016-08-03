@@ -46,6 +46,28 @@
     <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">tab</span> <span class="cm-attribute">title</span>=<span class="cm-string">&quot;Tab4&quot;</span><span class="cm-tagcm-bracket">&gt;</span>Content4<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">tab</span><span class="cm-tagcm-bracket">&gt;</span>
 <span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">tabs</span><span class="cm-tagcm-bracket">&gt;</span>
 </code></pre>
+<h3 id="current和selected">current和selected</h3>
+<div class="m-example"></div>
+
+<pre class="lang-xml"><code><span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;g-row&quot;</span><span class="cm-tagcm-bracket">&gt;</span>
+    <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;g-col g-col-6&quot;</span><span class="cm-tagcm-bracket">&gt;</span>
+        <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">tabs</span> <span class="cm-attribute">current</span>=<span class="cm-attribute">1</span><span class="cm-tagcm-bracketcm-error">&gt;</span>
+            <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">tab</span> <span class="cm-attribute">title</span>=<span class="cm-string">&quot;Tab1&quot;</span><span class="cm-tagcm-bracket">&gt;</span>Content1<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">tab</span><span class="cm-tagcm-bracket">&gt;</span>
+            <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">tab</span> <span class="cm-attribute">title</span>=<span class="cm-string">&quot;Tab2&quot;</span><span class="cm-tagcm-bracket">&gt;</span>Content2<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">tab</span><span class="cm-tagcm-bracket">&gt;</span>
+            <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">tab</span> <span class="cm-attribute">title</span>=<span class="cm-string">&quot;Tab3&quot;</span><span class="cm-tagcm-bracket">&gt;</span>Content3<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">tab</span><span class="cm-tagcm-bracket">&gt;</span>
+            <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">tab</span> <span class="cm-attribute">title</span>=<span class="cm-string">&quot;Tab4&quot;</span><span class="cm-tagcm-bracket">&gt;</span>Content4<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">tab</span><span class="cm-tagcm-bracket">&gt;</span>
+        <span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">tabs</span><span class="cm-tagcm-bracket">&gt;</span>
+    <span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tagcm-bracket">&gt;</span>
+    <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;g-col g-col-6&quot;</span><span class="cm-tagcm-bracket">&gt;</span>
+        <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">tabs</span><span class="cm-tagcm-bracket">&gt;</span>
+            <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">tab</span> <span class="cm-attribute">title</span>=<span class="cm-string">&quot;Tab1&quot;</span><span class="cm-tagcm-bracket">&gt;</span>Content1<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">tab</span><span class="cm-tagcm-bracket">&gt;</span>
+            <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">tab</span> <span class="cm-attribute">title</span>=<span class="cm-string">&quot;Tab2&quot;</span><span class="cm-tagcm-bracket">&gt;</span>Content2<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">tab</span><span class="cm-tagcm-bracket">&gt;</span>
+            <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">tab</span> <span class="cm-attribute">title</span>=<span class="cm-string">&quot;Tab3&quot;</span> <span class="cm-attribute">selected</span><span class="cm-tagcm-bracketcm-error">&gt;</span>Content3<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">tab</span><span class="cm-tagcm-bracket">&gt;</span>
+            <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">tab</span> <span class="cm-attribute">title</span>=<span class="cm-string">&quot;Tab4&quot;</span><span class="cm-tagcm-bracket">&gt;</span>Content4<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">tab</span><span class="cm-tagcm-bracket">&gt;</span>
+        <span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">tabs</span><span class="cm-tagcm-bracket">&gt;</span>
+    <span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tagcm-bracket">&gt;</span>
+<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tagcm-bracket">&gt;</span>
+</code></pre>
 <h3 id="禁用某一项，禁用组件">禁用某一项，禁用组件</h3>
 <div class="m-example"></div>
 
@@ -120,7 +142,25 @@
 </code></pre>
 <pre class="lang-javascript"><code><span class="cm-keyword">let</span> <span class="cm-variable">component</span> <span class="cm-operator">=</span> <span class="cm-keyword">new</span> <span class="cm-variable">RGUI</span>.<span class="cm-property">Component</span>({
     <span class="cm-property">template</span>,
-    <span class="cm-property">titleTemplate</span>: <span class="cm-string-2">`{item.data.title} {#if item.data.mark}&lt;span class=&quot;u-text u-text-success&quot;&gt;&lt;i class=&quot;u-icon u-icon-check-circle&quot;&gt;&lt;/i&gt;&lt;/span&gt;{/if}`</span>
+    <span class="cm-property">titleTemplate</span>: <span class="cm-string-2">`&lt;span&gt;{item.data.title} {#if item.data.mark}&lt;span class=&quot;u-text u-text-success&quot;&gt;&lt;i class=&quot;u-icon u-icon-check-circle&quot;&gt;&lt;/i&gt;&lt;/span&gt;{/if}&lt;/span&gt;`</span>
+});
+</code></pre>
+<h3 id="数据绑定">数据绑定</h3>
+<div class="m-example"></div>
+
+<pre class="lang-xml"><code><span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">tabs</span> <span class="cm-attribute">current</span>=<span class="cm-attribute">{current}</span><span class="cm-tagcm-bracketcm-error">&gt;</span>
+    <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">tab</span> <span class="cm-attribute">title</span>=<span class="cm-string">&quot;Tab0&quot;</span><span class="cm-tagcm-bracket">&gt;</span>Content0<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">tab</span><span class="cm-tagcm-bracket">&gt;</span>
+    <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">tab</span> <span class="cm-attribute">title</span>=<span class="cm-string">&quot;Tab1&quot;</span><span class="cm-tagcm-bracket">&gt;</span>Content1<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">tab</span><span class="cm-tagcm-bracket">&gt;</span>
+    <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">tab</span> <span class="cm-attribute">title</span>=<span class="cm-string">&quot;Tab2&quot;</span><span class="cm-tagcm-bracket">&gt;</span>Content2<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">tab</span><span class="cm-tagcm-bracket">&gt;</span>
+    <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">tab</span> <span class="cm-attribute">title</span>=<span class="cm-string">&quot;Tab3&quot;</span><span class="cm-tagcm-bracket">&gt;</span>Content3<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">tab</span><span class="cm-tagcm-bracket">&gt;</span>
+<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">tabs</span><span class="cm-tagcm-bracket">&gt;</span>
+<span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tagcm-bracket">&gt;</span><span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">span</span><span class="cm-tagcm-bracket">&gt;</span>当前页：{current}<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tagcm-bracket">&gt;</span><span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tagcm-bracket">&gt;</span>
+<span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;u-btn u-btn-info&quot;</span> <span class="cm-attribute">on-click</span>=<span class="cm-attribute">{current</span> <span class="cm-attribute">-</span>= <span class="cm-attribute">1}</span><span class="cm-tagcm-bracketcm-error">&gt;</span>上一页<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tagcm-bracket">&gt;</span>
+<span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;u-btn u-btn-info&quot;</span> <span class="cm-attribute">on-click</span>=<span class="cm-attribute">{current</span> <span class="cm-attribute">+</span>= <span class="cm-attribute">1}</span><span class="cm-tagcm-bracketcm-error">&gt;</span>下一页<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tagcm-bracket">&gt;</span>
+</code></pre>
+<pre class="lang-javascript"><code><span class="cm-keyword">let</span> <span class="cm-variable">component</span> <span class="cm-operator">=</span> <span class="cm-keyword">new</span> <span class="cm-variable">RGUI</span>.<span class="cm-property">Component</span>({
+    <span class="cm-property">template</span>,
+    <span class="cm-property">data</span>: {<span class="cm-property">current</span>: <span class="cm-number">2</span>},
 });
 </code></pre>
 <h3 id="事件">事件</h3>
@@ -129,10 +169,10 @@
 
 <pre class="lang-xml"><code><span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">tabs</span> <span class="cm-attribute">current</span>=<span class="cm-attribute">{2}</span> <span class="cm-attribute">on-select</span>=<span class="cm-attribute">{console.log(</span><span class="cm-stringcm-error">&#39;on-select:&#39;</span><span class="cm-attribute">,</span> <span class="cm-stringcm-error">&#39;$event.current:&#39;</span><span class="cm-attribute">,</span> <span class="cm-attribute">$event.current)}</span>
       <span class="cm-attribute">on-change</span>=<span class="cm-attribute">{console.log(</span><span class="cm-stringcm-error">&#39;on-change:&#39;</span><span class="cm-attribute">,</span> <span class="cm-stringcm-error">&#39;$event.current:&#39;</span><span class="cm-attribute">,</span> <span class="cm-attribute">$event.current)}</span><span class="cm-tagcm-bracketcm-error">&gt;</span>
+    <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">tab</span> <span class="cm-attribute">title</span>=<span class="cm-string">&quot;Tab0&quot;</span><span class="cm-tagcm-bracket">&gt;</span>Content0<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">tab</span><span class="cm-tagcm-bracket">&gt;</span>
     <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">tab</span> <span class="cm-attribute">title</span>=<span class="cm-string">&quot;Tab1&quot;</span><span class="cm-tagcm-bracket">&gt;</span>Content1<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">tab</span><span class="cm-tagcm-bracket">&gt;</span>
     <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">tab</span> <span class="cm-attribute">title</span>=<span class="cm-string">&quot;Tab2&quot;</span><span class="cm-tagcm-bracket">&gt;</span>Content2<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">tab</span><span class="cm-tagcm-bracket">&gt;</span>
     <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">tab</span> <span class="cm-attribute">title</span>=<span class="cm-string">&quot;Tab3&quot;</span><span class="cm-tagcm-bracket">&gt;</span>Content3<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">tab</span><span class="cm-tagcm-bracket">&gt;</span>
-    <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">tab</span> <span class="cm-attribute">title</span>=<span class="cm-string">&quot;Tab4&quot;</span><span class="cm-tagcm-bracket">&gt;</span>Content4<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">tab</span><span class="cm-tagcm-bracket">&gt;</span>
 <span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">tabs</span><span class="cm-tagcm-bracket">&gt;</span>
 </code></pre>
 <pre class="lang-javascript"><code><span class="cm-keyword">let</span> <span class="cm-variable">component</span> <span class="cm-operator">=</span> <span class="cm-keyword">new</span> <span class="cm-variable">RGUI</span>.<span class="cm-property">Component</span>({
@@ -166,23 +206,50 @@
             
             <tr><td class="f-wsn"><code>data</code></td><td class="f-wsn">object</td><td class="f-wsn"></td><td class="f-tac"></td><td>绑定属性</td></tr>
             
-            <tr><td class="f-wsn"><code>data.selected</code></td><td class="f-wsn">object</td><td class="f-wsn"><code>null</code></td><td class="f-tac">outer &lt;=&gt; inner</td><td>当前选择卡</td></tr>
+            <tr><td class="f-wsn"><code>data.current</code></td><td class="f-wsn">number</td><td class="f-wsn"><code>0</code></td><td class="f-tac">outside &lt;=&gt; inside</td><td>当前选择页索引</td></tr>
             
-            <tr><td class="f-wsn"><code>data.titleTemplate</code></td><td class="f-wsn">string</td><td class="f-wsn"><code>null</code></td><td class="f-tac">outer @=&gt; inner</td><td>标题模板</td></tr>
+            <tr><td class="f-wsn"><code>data.titleTemplate</code></td><td class="f-wsn">string</td><td class="f-wsn"></td><td class="f-tac">outside @=&gt; inside</td><td>标题模板</td></tr>
             
-            <tr><td class="f-wsn"><code>data.readonly</code></td><td class="f-wsn">boolean</td><td class="f-wsn"><code>false</code></td><td class="f-tac">outer  =&gt; inner</td><td>是否只读</td></tr>
+            <tr><td class="f-wsn"><code>data.readonly</code></td><td class="f-wsn">boolean</td><td class="f-wsn"><code>false</code></td><td class="f-tac">outside  =&gt; inside</td><td>是否只读</td></tr>
             
-            <tr><td class="f-wsn"><code>data.disabled</code></td><td class="f-wsn">boolean</td><td class="f-wsn"><code>false</code></td><td class="f-tac">outer  =&gt; inner</td><td>是否禁用</td></tr>
+            <tr><td class="f-wsn"><code>data.disabled</code></td><td class="f-wsn">boolean</td><td class="f-wsn"><code>false</code></td><td class="f-tac">outside  =&gt; inside</td><td>是否禁用</td></tr>
             
-            <tr><td class="f-wsn"><code>data.visible</code></td><td class="f-wsn">boolean</td><td class="f-wsn"><code>true</code></td><td class="f-tac">outer  =&gt; inner</td><td>是否显示</td></tr>
+            <tr><td class="f-wsn"><code>data.visible</code></td><td class="f-wsn">boolean</td><td class="f-wsn"><code>true</code></td><td class="f-tac">outside  =&gt; inside</td><td>是否显示</td></tr>
             
-            <tr><td class="f-wsn"><code>data.class</code></td><td class="f-wsn">string</td><td class="f-wsn"><code>&#39;&#39;</code></td><td class="f-tac">outer  =&gt; inner</td><td>补充class</td></tr>
+            <tr><td class="f-wsn"><code>data.class</code></td><td class="f-wsn">string</td><td class="f-wsn"><code>&#39;&#39;</code></td><td class="f-tac">outside  =&gt; inside</td><td>补充class</td></tr>
             
         
     </tbody>
 </table>
 <div id="j-options"></div>
 
+
+    <h3 id="Methods">Methods</h3>
+    
+    
+    <h4>tabs.select(tab)</h4>
+    <p>选择某一项</p>
+    <table>
+        <thead>
+            <tr><th width="25%">参数</th><th width="25%">类型</th><th width="25%">默认值</th><th width="25%">描述</th></tr>
+        </thead>
+        <tbody>
+            
+                
+                <tr><td class="f-wsn"><code>tab</code></td><td class="f-wsn">Tab</td><td class="f-wsn"></td><td>选择项</td></tr>
+                
+            
+        </tbody>
+        <thead>
+            <tr><th width="25%">返回值</th><th width="25%">类型</th><th width="50%" colspan="2">描述</th></tr>
+        </thead>
+        <tbody>
+            
+                <tr><td class="f-tac" colspan="4">无返回值</td></tr>
+            
+        </tbody>
+    </table>
+    
 
 <div id="j-methods"></div>
 
@@ -197,7 +264,7 @@
     
     
     <h4>tabs.$on('change')</h4>
-    <p>选择值改变时触发</p>
+    <p>选择页改变时触发</p>
     <table>
         <thead>
             <tr><th width="33%">属性</th><th width="33%">类型</th><th width="33%">描述</th></tr>
@@ -207,9 +274,29 @@
                 
                 <tr><td class="f-wsn"><code>sender</code></td><td class="f-wsn">object</td><td class="f-wsn">事件发送对象</td></tr>
                 
-                <tr><td class="f-wsn"><code>selected</code></td><td class="f-wsn">Item</td><td class="f-wsn">改变后的选择项</td></tr>
+                <tr><td class="f-wsn"><code>current</code></td><td class="f-wsn">number</td><td class="f-wsn">改变后的选择页索引</td></tr>
                 
-                <tr><td class="f-wsn"><code>current</code></td><td class="f-wsn">var</td><td class="f-wsn">当前项索引</td></tr>
+                <tr><td class="f-wsn"><code>selected</code></td><td class="f-wsn">Tab</td><td class="f-wsn">改变后的选择页</td></tr>
+                
+            
+        </tbody>
+    </table>
+    
+    
+    <h4>tabs.$on('select')</h4>
+    <p>选择某一项时触发</p>
+    <table>
+        <thead>
+            <tr><th width="33%">属性</th><th width="33%">类型</th><th width="33%">描述</th></tr>
+        </thead>
+        <tbody>
+            
+                
+                <tr><td class="f-wsn"><code>sender</code></td><td class="f-wsn">object</td><td class="f-wsn">事件发送对象</td></tr>
+                
+                <tr><td class="f-wsn"><code>current</code></td><td class="f-wsn">number</td><td class="f-wsn">当前选择页索引</td></tr>
+                
+                <tr><td class="f-wsn"><code>selected</code></td><td class="f-wsn">Tab</td><td class="f-wsn">当前选择页</td></tr>
                 
             
         </tbody>
@@ -245,6 +332,13 @@
 var index = 0;
 (function (index) {
     var template = "<tabs>\n    <tab title=\"Tab1\">Content1</tab>\n    <tab title=\"Tab2\">Content2</tab>\n    <tab title=\"Tab3\">Content3</tab>\n    <tab title=\"Tab4\">Content4</tab>\n</tabs>";
+    var component = new RGUI.Component({
+        template: template
+    });
+    component && component.$inject($$(".m-example")[index]);
+})(index++);
+(function (index) {
+    var template = "<div class=\"g-row\">\n    <div class=\"g-col g-col-6\">\n        <tabs current=1>\n            <tab title=\"Tab1\">Content1</tab>\n            <tab title=\"Tab2\">Content2</tab>\n            <tab title=\"Tab3\">Content3</tab>\n            <tab title=\"Tab4\">Content4</tab>\n        </tabs>\n    </div>\n    <div class=\"g-col g-col-6\">\n        <tabs>\n            <tab title=\"Tab1\">Content1</tab>\n            <tab title=\"Tab2\">Content2</tab>\n            <tab title=\"Tab3\" selected>Content3</tab>\n            <tab title=\"Tab4\">Content4</tab>\n        </tabs>\n    </div>\n</div>";
     var component = new RGUI.Component({
         template: template
     });
@@ -289,12 +383,20 @@ var index = 0;
     var template = "<tabs titleTemplate={@(this.titleTemplate)}>\n    <tab title=\"Tab1\">Content1</tab>\n    <tab title=\"Tab2\" mark={true}>Content2</tab>\n    <tab title=\"Tab3\" mark={true}>Content3</tab>\n    <tab title=\"Tab4\">Content4</tab>\n</tabs>";
     var component = new RGUI.Component({
         template: template,
-        titleTemplate: "{item.data.title} {#if item.data.mark}<span class=\"u-text u-text-success\"><i class=\"u-icon u-icon-check-circle\"></i></span>{/if}"
+        titleTemplate: "<span>{item.data.title} {#if item.data.mark}<span class=\"u-text u-text-success\"><i class=\"u-icon u-icon-check-circle\"></i></span>{/if}</span>"
     });
     component && component.$inject($$(".m-example")[index]);
 })(index++);
 (function (index) {
-    var template = "<tabs current={2} on-select={console.log('on-select:', '$event.current:', $event.current)}\n      on-change={console.log('on-change:', '$event.current:', $event.current)}>\n    <tab title=\"Tab1\">Content1</tab>\n    <tab title=\"Tab2\">Content2</tab>\n    <tab title=\"Tab3\">Content3</tab>\n    <tab title=\"Tab4\">Content4</tab>\n</tabs>";
+    var template = "<tabs current={current}>\n    <tab title=\"Tab0\">Content0</tab>\n    <tab title=\"Tab1\">Content1</tab>\n    <tab title=\"Tab2\">Content2</tab>\n    <tab title=\"Tab3\">Content3</tab>\n</tabs>\n<p><span>当前页：{current}</span></p>\n<a class=\"u-btn u-btn-info\" on-click={current -= 1}>上一页</a>\n<a class=\"u-btn u-btn-info\" on-click={current += 1}>下一页</a>";
+    var component = new RGUI.Component({
+        template: template,
+        data: { current: 2 }
+    });
+    component && component.$inject($$(".m-example")[index]);
+})(index++);
+(function (index) {
+    var template = "<tabs current={2} on-select={console.log('on-select:', '$event.current:', $event.current)}\n      on-change={console.log('on-change:', '$event.current:', $event.current)}>\n    <tab title=\"Tab0\">Content0</tab>\n    <tab title=\"Tab1\">Content1</tab>\n    <tab title=\"Tab2\">Content2</tab>\n    <tab title=\"Tab3\">Content3</tab>\n</tabs>";
     var component = new RGUI.Component({
         template: template,
         data: {

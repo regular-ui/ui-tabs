@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<!-- 该文件由rgui-tools自动生成 -->
+<meta charset="utf-8">
+<title>Regular UI - Tabs</title>
+<meta name="author" content="Rainfore">
+<meta name="keywords" content="Regular,UI,JavaScript,Framework,MVC,MVVM">
+<meta name="description" content="Regular UI">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<link rel="icon" href="https://regular-ui.github.io/v0.2/img/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="https://regular-ui.github.io/v0.2/img/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="https://regular-ui.github.io/v0.2/css/doc.default.min.css">
+<link rel="stylesheet" href="../css/index.css">
+<!--[if lt IE9]>
+<script>
+(function() {
+    if (!
+    /*@cc_on!@*/
+    0) return;
+    var e = 'abbr, article, aside, audio, canvas, datalist, details, dialog, eventsource, figure, footer, header, hgroup, mark, menu, meter, nav, output, progress, section, time, video'.split(', ');
+    var i= e.length;
+    while (i--)
+        document.createElement(e[i]);
+})();
+</script>
+<![endif]-->
+</head>
+<body>
+<div class="g-top">
+    <div class="g-topc">
+        <a class="u-logo" href="./">Regular UI</a>
+    </div>
+</div>
+<div class="g-bd"><div class="g-bdc"><div class="g-mn g-mn-center">
+    <article class="m-article">
+        <h1>选项卡<small> Tabs</small></h1>
+        <h2 id="案例">案例</h2>
+<h3 id="仅使用头部">仅使用头部</h3>
+<div class="m-example"></div>
+
+<pre class="lang-xml"><code><span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">tabs</span> <span class="cm-attribute">current</span>=<span class="cm-attribute">{current}</span><span class="cm-tagcm-bracketcm-error">&gt;</span>
+    <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">tab</span> <span class="cm-attribute">title</span>=<span class="cm-string">&quot;Tab1&quot;</span><span class="cm-tagcm-bracket">&gt;</span><span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">tab</span><span class="cm-tagcm-bracket">&gt;</span>
+    <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">tab</span> <span class="cm-attribute">title</span>=<span class="cm-string">&quot;Tab2&quot;</span><span class="cm-tagcm-bracket">&gt;</span><span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">tab</span><span class="cm-tagcm-bracket">&gt;</span>
+    <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">tab</span> <span class="cm-attribute">title</span>=<span class="cm-string">&quot;Tab3&quot;</span><span class="cm-tagcm-bracket">&gt;</span><span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">tab</span><span class="cm-tagcm-bracket">&gt;</span>
+    <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">tab</span> <span class="cm-attribute">title</span>=<span class="cm-string">&quot;Tab4&quot;</span><span class="cm-tagcm-bracket">&gt;</span><span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">tab</span><span class="cm-tagcm-bracket">&gt;</span>
+<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">tabs</span><span class="cm-tagcm-bracket">&gt;</span>
+<span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">p</span><span class="cm-tagcm-bracket">&gt;</span><span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">span</span><span class="cm-tagcm-bracket">&gt;</span>当前页：{current}<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">span</span><span class="cm-tagcm-bracket">&gt;</span><span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">p</span><span class="cm-tagcm-bracket">&gt;</span>
+</code></pre>
+<pre class="lang-javascript"><code><span class="cm-keyword">let</span> <span class="cm-variable">component</span> <span class="cm-operator">=</span> <span class="cm-keyword">new</span> <span class="cm-variable">RGUI</span>.<span class="cm-property">Component</span>({
+    <span class="cm-property">template</span>,
+    <span class="cm-property">data</span>: {<span class="cm-property">current</span>: <span class="cm-number">2</span>},
+});
+</code></pre>
+<h3 id="仅使用样式">仅使用样式</h3>
+<div class="m-example"></div>
+
+<pre class="lang-xml"><code><span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;m-tabs&quot;</span><span class="cm-tagcm-bracket">&gt;</span>
+    <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">ul</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;tabs_hd&quot;</span><span class="cm-tagcm-bracket">&gt;</span>
+        <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">li</span> <span class="cm-attribute">z-crt</span>=<span class="cm-attribute">{current</span> =<span class="cm-nullcm-error">=</span><span class="cm-nullcm-error">=</span> <span class="cm-attribute">0}</span><span class="cm-tagcm-bracketcm-error">&gt;</span><span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">href</span>=<span class="cm-string">&quot;#0&quot;</span><span class="cm-tagcm-bracket">&gt;</span>CSS元件<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tagcm-bracket">&gt;</span><span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tagcm-bracket">&gt;</span>
+        <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">li</span> <span class="cm-attribute">z-crt</span>=<span class="cm-attribute">{current</span> =<span class="cm-nullcm-error">=</span><span class="cm-nullcm-error">=</span> <span class="cm-attribute">1}</span><span class="cm-tagcm-bracketcm-error">&gt;</span><span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">href</span>=<span class="cm-string">&quot;#1&quot;</span><span class="cm-tagcm-bracket">&gt;</span>CSS模块<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tagcm-bracket">&gt;</span><span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tagcm-bracket">&gt;</span>
+        <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">li</span> <span class="cm-attribute">z-crt</span>=<span class="cm-attribute">{current</span> =<span class="cm-nullcm-error">=</span><span class="cm-nullcm-error">=</span> <span class="cm-attribute">2}</span><span class="cm-tagcm-bracketcm-error">&gt;</span><span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">href</span>=<span class="cm-string">&quot;#2&quot;</span><span class="cm-tagcm-bracket">&gt;</span>JS元件<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tagcm-bracket">&gt;</span><span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tagcm-bracket">&gt;</span>
+        <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">li</span> <span class="cm-attribute">z-crt</span>=<span class="cm-attribute">{current</span> =<span class="cm-nullcm-error">=</span><span class="cm-nullcm-error">=</span> <span class="cm-attribute">3}</span><span class="cm-tagcm-bracketcm-error">&gt;</span><span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">a</span> <span class="cm-attribute">href</span>=<span class="cm-string">&quot;#3&quot;</span><span class="cm-tagcm-bracket">&gt;</span>JS模块<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">a</span><span class="cm-tagcm-bracket">&gt;</span><span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">li</span><span class="cm-tagcm-bracket">&gt;</span>
+    <span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">ul</span><span class="cm-tagcm-bracket">&gt;</span>
+    <span class="cm-tagcm-bracket">&lt;</span><span class="cm-tag">div</span> <span class="cm-attribute">class</span>=<span class="cm-string">&quot;tabs_bd&quot;</span><span class="cm-tagcm-bracket">&gt;</span>{current}<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tagcm-bracket">&gt;</span>
+<span class="cm-tagcm-bracket">&lt;/</span><span class="cm-tag">div</span><span class="cm-tagcm-bracket">&gt;</span>
+</code></pre>
+<pre class="lang-javascript"><code><span class="cm-keyword">let</span> <span class="cm-variable">component</span> <span class="cm-operator">=</span> <span class="cm-keyword">new</span> <span class="cm-variable">RGUI</span>.<span class="cm-property">Component</span>({
+    <span class="cm-property">template</span>,
+    <span class="cm-property">data</span>: {<span class="cm-property">current</span>: <span class="cm-number">2</span>},
+    <span class="cm-property">config</span>() {
+        <span class="cm-variable">Regular</span>.<span class="cm-property">dom</span>.<span class="cm-property">on</span>(<span class="cm-variable">window</span>, <span class="cm-string">&#39;hashchange&#39;</span>, () <span class="cm-operator">=&gt;</span> {
+            <span class="cm-keyword">let</span> <span class="cm-variable">current</span> <span class="cm-operator">=</span> <span class="cm-operator">+</span><span class="cm-variable">location</span>.<span class="cm-variable">hash</span>.<span class="cm-variable">slice</span>(<span class="cm-number">1</span>);
+            <span class="cm-keyword">this</span>.<span class="cm-property">data</span>.<span class="cm-property">current</span> <span class="cm-operator">=</span> <span class="cm-variable">isNaN</span>(<span class="cm-variable">current</span>) <span class="cm-operator">?</span> <span class="cm-number">0</span> : <span class="cm-variable">current</span>;
+            <span class="cm-keyword">this</span>.<span class="cm-property">$update</span>();
+        });
+    }
+});
+</code></pre>
+
+        
+    </article>
+</div>
+</div></div><div class="g-ft">
+    <footer class="m-footer">
+        <p><a href="https://regular-ui.github.io/v0.2/" class="footer_logo"><img src="https://regular-ui.github.io/v0.2/img/logo-v2.0-bg-48.png" /></p>
+        <p>
+            <a href="https://github.com/regular-ui/regular-ui" target="_blank">GitHub</a> |
+            <a href="https://github.com/regular-ui/regular-ui/issues" target="_blank">Issues</a> |
+            <a href="https://github.com/regular-ui/regular-ui/releases" target="_blank">ChangeLog</a> |
+            <a href="https://github.com/regular-ui/regular-ui/blob/master/CONTRIBUTING.md" target="_blank">Contributing</a>
+        </p>
+        <p>Licensed under <a href="https://github.com/regular-ui/regular-ui/blob/master/LICENSE" target="_blank">MIT license</a>.</p>
+    </footer>
+</div>
+<script src="https://regular-ui.github.io/v0.2/vendor/polyfill.min.js"></script>
+<script src="https://regular-ui.github.io/v0.2/vendor/regular.min.js"></script>
+<script src="../js/index.js"></script>
+<script src="https://regular-ui.github.io/v0.2/js/helper.js"></script>
+<script>
+"use strict";
+
+var index = 0;
+(function (index) {
+    var template = "<tabs current={current}>\n    <tab title=\"Tab1\"></tab>\n    <tab title=\"Tab2\"></tab>\n    <tab title=\"Tab3\"></tab>\n    <tab title=\"Tab4\"></tab>\n</tabs>\n<p><span>当前页：{current}</span></p>";
+    var component = new RGUI.Component({
+        template: template,
+        data: { current: 2 }
+    });
+    component && component.$inject($$(".m-example")[index]);
+})(index++);
+(function (index) {
+    var template = "<div class=\"m-tabs\">\n    <ul class=\"tabs_hd\">\n        <li z-crt={current === 0}><a href=\"#0\">CSS元件</a></li>\n        <li z-crt={current === 1}><a href=\"#1\">CSS模块</a></li>\n        <li z-crt={current === 2}><a href=\"#2\">JS元件</a></li>\n        <li z-crt={current === 3}><a href=\"#3\">JS模块</a></li>\n    </ul>\n    <div class=\"tabs_bd\">{current}</div>\n</div>";
+    var component = new RGUI.Component({
+        template: template,
+        data: { current: 2 },
+        config: function config() {
+            var _this = this;
+
+            Regular.dom.on(window, 'hashchange', function () {
+                var current = +location.hash.slice(1);
+                _this.data.current = isNaN(current) ? 0 : current;
+                _this.$update();
+            });
+        }
+    });
+    component && component.$inject($$(".m-example")[index]);
+})(index++);
+</script>
+</body>
+</html>
