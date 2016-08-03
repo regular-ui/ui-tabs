@@ -1,7 +1,7 @@
 {
   "name": "rgui-ui-tabs",
   "description": "Regular UI - Tabs",
-  "version": "0.2.0",
+  "version": "0.2.0-alpha",
   "author": "Rainfore <rainforest92@126.com>",
   "main": "./index.js",
   "repository": "regular-ui/ui-tabs",
@@ -11,6 +11,6 @@
   "keywords": ["regular", "ui", "rgui", "tabs"],
   "tags": ["regular", "ui", "rgui", "tabs"],
   "dependencies": {
-    "rgui-ui-listview": "0.2.0-alpha"
+    "rgui-ui-listview": "^0.2.0-alpha"
   }
 }

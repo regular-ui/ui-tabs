@@ -12,7 +12,7 @@ import { Item } from 'rgui-ui-listview';
  */
 const Tab = Item.extend({
     name: 'tab',
-    template: '<div r-hide={this.$outer.data.selected !== this}>{#inc this.$body}</div>',
+    template: '<div r-hide={this.$outer.data._selected !== this}>{#inc this.$body}</div>',
     /**
      * @protected
      * @override

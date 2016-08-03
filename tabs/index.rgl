@@ -5,7 +5,7 @@
             {#if @(titleTemplate)}
                 {#inc @(titleTemplate)}
             {#else}
-                {item.data.title}
+                <span>{item.data.title}</span>
             {/if}
         </li>
         {/list}

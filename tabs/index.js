@@ -5,8 +5,8 @@ import template from './index.rgl';
  * @class Tabs
  * @extend ListView
  * @param {object}                  options.data                     =  绑定属性
- * @param {object=null}             options.data.selected           <=> 当前选择卡
- * @param {string=null}             options.data.titleTemplate      @=> 标题模板
+ * @param {number=0}                options.data.current            <=> 当前选择页索引
+ * @param {string}                  options.data.titleTemplate      @=> 标题模板
  * @param {boolean=false}           options.data.readonly            => 是否只读
  * @param {boolean=false}           options.data.disabled            => 是否禁用
  * @param {boolean=true}            options.data.visible             => 是否显示
@@ -34,14 +34,13 @@ const Tabs = ListView.extend({
      */
     watch() {
         this.$watch('current', (newValue, oldValue) => {
-            if (!this.data._selected)
-                this.data._selected = this.data._list[newValue];
+            this.data._selected = this.data._list[newValue];
 
             /**
-             * @event change 选择值改变时触发
+             * @event change 选择页改变时触发
              * @property {object} sender 事件发送对象
-             * @property {Item} selected 改变后的选择项
-             * @property {var} current 当前项索引
+             * @property {number} current 改变后的选择页索引
+             * @property {Tab} selected 改变后的选择页
              */
             this.$emit('change', {
                 sender: this,
@@ -53,6 +52,30 @@ const Tabs = ListView.extend({
         this.$watch('_selected', (newValue, oldValue) => {
             // 设置current
             this.data.current = newValue ? this.data._list.indexOf(newValue) : newValue;
+        });
+    },
+    /**
+     * @method select(tab) 选择某一项
+     * @public
+     * @param  {Tab} tab 选择项
+     * @return {void}
+     */
+    select(tab) {
+        if (this.data.readonly || this.data.disabled)
+            return;
+
+        this.data._selected = tab;
+
+        /**
+         * @event select 选择某一项时触发
+         * @property {object} sender 事件发送对象
+         * @property {number} current 当前选择页索引
+         * @property {Tab} selected 当前选择页
+         */
+        this.$emit('select', {
+            sender: this,
+            selected: tab,
+            current: this.data._list.indexOf(tab),
         });
     },
 });
