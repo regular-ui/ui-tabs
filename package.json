@@ -12,5 +12,8 @@
   "tags": ["regular", "ui", "rgui", "tabs"],
   "dependencies": {
     "rgui-ui-listview": "^0.2.0-alpha"
+  },
+  "peerDependencies": {
+    "regularjs": "^0.4.3"
   }
 }

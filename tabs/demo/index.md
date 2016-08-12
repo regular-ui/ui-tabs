@@ -121,8 +121,8 @@
 ```xml
 <tabs titleTemplate={@(this.titleTemplate)}>
     <tab title="Tab1">Content1</tab>
-    <tab title="Tab2" mark={true}>Content2</tab>
-    <tab title="Tab3" mark={true}>Content3</tab>
+    <tab title="Tab2" success={true}>Content2</tab>
+    <tab title="Tab3" success={true}>Content3</tab>
     <tab title="Tab4">Content4</tab>
 </tabs>
 ```
@@ -130,7 +130,7 @@
 ```javascript
 let component = new RGUI.Component({
     template,
-    titleTemplate: `<span>{item.data.title} {#if item.data.mark}<span class="u-text u-text-success"><i class="u-icon u-icon-check-circle"></i></span>{/if}</span>`
+    titleTemplate: `<span>{item.data.title} {#if item.data.success}<span class="u-text u-text-success"><i class="u-icon u-icon-check-circle"></i></span>{/if}</span>`
 });
 ```
 
@@ -171,17 +171,4 @@ let component = new RGUI.Component({
     <tab title="Tab2">Content2</tab>
     <tab title="Tab3">Content3</tab>
 </tabs>
-```
-
-```javascript
-let component = new RGUI.Component({
-    template,
-    data: {
-        source: [
-            {name: '选项1'},
-            {name: '选项2'},
-            {name: '选项3'},
-        ]
-    }
-});
 ```
