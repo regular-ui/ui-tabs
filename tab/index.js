@@ -18,11 +18,11 @@ const Tab = Item.extend({
      * @override
      */
     config() {
-        this.data = Object.assign({
+        this.defaults({
             // @inherited selected: false,
             // @inherited disabled: false,
             title: '',
-        }, this.data);
+        });
         this.supr();
     },
 });

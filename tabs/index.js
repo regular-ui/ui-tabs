@@ -20,12 +20,12 @@ const Tabs = ListView.extend({
      * @override
      */
     config() {
-        this.data = Object.assign({
+        this.defaults({
             // @inherited _list: [],
             // @inherited _selected: undefined,
             current: 0,
             titleTemplate: undefined,
-        }, this.data);
+        });
         this.supr();
     },
     /**
