@@ -3,8 +3,8 @@ import template from './index.rgl';
 
 /**
  * @class Tabs
- * @extend ListView
- * @param {object}                  options.data                     =  绑定属性
+ * @extends ListView
+ * @param {Object}                  options.data                     =  绑定属性
  * @param {number=0}                options.data.current            <=> 当前选择页索引
  * @param {string}                  options.data.titleTemplate      @=> 标题模板
  * @param {boolean=false}           options.data.readonly            => 是否只读
@@ -33,8 +33,8 @@ const Tabs = ListView.extend({
      * @override
      */
     watch() {
-        this.$watch('current', (newValue, oldValue) => {
-            this.data._selected = this.data._list[newValue];
+        this.$watch('current', (current) => {
+            this.data._selected = this.data._list[current];
 
             /**
              * @event change 选择页改变时触发
@@ -45,13 +45,13 @@ const Tabs = ListView.extend({
             this.$emit('change', {
                 sender: this,
                 selected: this.data._selected,
-                current: newValue,
+                current,
             });
         });
 
-        this.$watch('_selected', (newValue, oldValue) => {
+        this.$watch('_selected', (_selected) => {
             // 设置current
-            this.data.current = newValue ? this.data._list.indexOf(newValue) : newValue;
+            this.data.current = _selected ? this.data._list.indexOf(_selected) : _selected;
         });
     },
     /**

@@ -2,8 +2,8 @@ import { Item } from 'rgui-ui-listview';
 
 /**
  * @class Tab
- * @extend Item
- * @param {object}                  options.data                     =  绑定属性
+ * @extends Item
+ * @param {Object}                  options.data                     =  绑定属性
  * @param {boolean=false}           options.data.selected           <=> 该项是否被选中
  * @param {string=''}               options.data.title               => 该项的工具提示
  * @param {boolean=false}           options.data.disabled            => 禁用该项
