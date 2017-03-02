@@ -10,7 +10,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 <link rel="icon" href="https://regular-ui.github.io/v0.2/img/favicon.ico" type="image/x-icon">
 <link rel="shortcut icon" href="https://regular-ui.github.io/v0.2/img/favicon.ico" type="image/x-icon">
-<link rel="stylesheet" href="https://regular-ui.github.io/v0.2/css/doc.default.min.css">
+<link rel="stylesheet" href="https://regular-ui.github.io/v0.2/css/docs.default.min.css">
 <link rel="stylesheet" href="../css/index.css">
 <!--[if lt IE9]>
 <script>
@@ -102,7 +102,7 @@
 
 var index = 0;
 (function (index) {
-    var template = "<tabs current={current}>\n    <tab title=\"Tab1\"></tab>\n    <tab title=\"Tab2\"></tab>\n    <tab title=\"Tab3\"></tab>\n    <tab title=\"Tab4\"></tab>\n</tabs>\n<p><span>当前页：{current}</span></p>";
+    var template = "<tabs current={current}>\n    <tab title=\"Tab1\"></tab>\n    <tab title=\"Tab2\"></tab>\n    <tab title=\"Tab3\"></tab>\n    <tab title=\"Tab4\"></tab>\n</tabs>\n<p><span>\u5F53\u524D\u9875\uFF1A{current}</span></p>";
     var component = new RGUI.Component({
         template: template,
         data: { current: 2 }
@@ -110,7 +110,7 @@ var index = 0;
     component && component.$inject($$(".m-example")[index]);
 })(index++);
 (function (index) {
-    var template = "<div class=\"m-tabs\">\n    <ul class=\"tabs_hd\">\n        <li z-crt={current === 0}><a href=\"#0\">CSS元件</a></li>\n        <li z-crt={current === 1}><a href=\"#1\">CSS模块</a></li>\n        <li z-crt={current === 2}><a href=\"#2\">JS元件</a></li>\n        <li z-crt={current === 3}><a href=\"#3\">JS模块</a></li>\n    </ul>\n    <div class=\"tabs_bd\">{current}</div>\n</div>";
+    var template = "<div class=\"m-tabs\">\n    <ul class=\"tabs_hd\">\n        <li z-crt={current === 0}><a href=\"#0\">CSS\u5143\u4EF6</a></li>\n        <li z-crt={current === 1}><a href=\"#1\">CSS\u6A21\u5757</a></li>\n        <li z-crt={current === 2}><a href=\"#2\">JS\u5143\u4EF6</a></li>\n        <li z-crt={current === 3}><a href=\"#3\">JS\u6A21\u5757</a></li>\n    </ul>\n    <div class=\"tabs_bd\">{current}</div>\n</div>";
     var component = new RGUI.Component({
         template: template,
         data: { current: 2 },
